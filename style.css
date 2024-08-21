@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(19,76,67,1) 22%, rgba(38,104,13,1) 30%, rgba(121,97,9,1) 35%, rgba(67,43,113,1) 44%, rgba(51,165,153,1) 73%, rgba(45,170,164,1) 76%, rgba(0,212,255,1) 100%);
+    padding : 10px;
+}
+
+.todoapp{
+    padding: 40px 60px 70px;
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto;
+    
+}
+
+.todoapp h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.todoapp h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    content: '';
+}
+
+button{
+    padding: 16px 50px;
+    border: none;
+    outline: black;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#153677,#4e085f) ;
+    font-size: 14px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+button:hover{
+    scale: 1.10;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    left: 560px;}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+ul li span:hover{
+    background: #edeef0;
+    text-decoration: none;
+}
+
+@media (max-width:1920px) {
+    ul li::before{
+        left: 1000px;
+    }
+    ul li{
+        width: 1920px;
+    }
+}
+@media (max-width:470px) {
+    .todoapp{
+        margin: 0;
+    }
+    
+    button{
+        padding: 10px 30px;
+    }
+    ul li{
+        width: 360px;
+    }
+}
+@media (max-width:420px){
+    input{
+        padding: 0px;
+    font-size: 9px;
+    }
+    ul li{
+        width: 360px;
+    }
+}
+@media (max-width:360px){
+    h2{
+        font-size: 12px;
+    }
+    ul li{
+        width: 360px;
+    }
+}
